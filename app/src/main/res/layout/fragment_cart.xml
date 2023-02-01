@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2EE"
+    tools:context=".CartFragment"
+    android:layout_marginTop="?attr/actionBarSize"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!-- TODO: Update blank fragment layout -->
+<ScrollView
+    android:id="@+id/scrl_cart"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/lin_cart"
+    android:layout_alignParentTop="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:src="@drawable/ic_location_pin_profile"
+                android:background="@color/white"
+                />
+            <TextView
+                android:id="@+id/txt_location_cart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:text="location"
+                android:paddingTop="5dp"
+                android:background="@color/white"
+                />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyl_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/lin_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"
+                android:layout_marginStart="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_cart_totalamount_iteam_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B900(0 items)"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/deepgray"
+                    android:paddingStart="1dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_cart_totalsavings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B900 Savings"
+                    android:layout_marginTop="1dp"
+                    android:textSize="12sp"
+                    android:textColor="#359647"
+                    android:paddingStart="1dp"
+                    />
+
+            </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_buy_cart"
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="wrap_content"
+            android:text="Place order"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="2dp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+
+            />
+
+        </LinearLayout>
+
+</RelativeLayout>
+</FrameLayout>

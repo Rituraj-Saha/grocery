@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+    <item
+
+        android:id="@+id/dashboard"
+        android:title="Home"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        >
+    </item>
+    </group>
+
+
+            <group>
+                <item
+                    android:id="@+id/client_view_profile"
+                    android:title="My Profile"
+                    android:icon="@drawable/ic_person_outline_black_24dp"
+                    />
+            </group>
+
+
+    <item
+        android:title="Services"
+        >
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/client_find_electrician"
+                    android:title="Fresh"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    />
+                <item
+                    android:id="@+id/client_find_appliance"
+                    android:title="Cooking Delights"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    />
+                <item
+                    android:id="@+id/client_find_plumber"
+                    android:title="Dairy Product"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    />
+                <item
+                    android:id="@+id/client_find_carpenter"
+                    android:title="Wellness"
+                    android:icon="@drawable/ic_search_black_24dp"
+                    />
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Cart">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/my_cart"
+                    android:icon="@drawable/ic_shopping_cart_black_24dp"
+                    android:title="My Cart" />
+
+                <item
+                    android:id="@+id/my_subscription"
+                    android:icon="@drawable/ic_shopping_cart_black_24dp"
+                    android:title="My Subscription" />
+
+              <!--  <item
+                    android:id="@+id/my_week_subscription"
+                    android:icon="@drawable/ic_shopping_cart_black_24dp"
+                    android:title="My Weekly Subscription" />-->
+              <!--  <item
+                    android:id="@+id/my_daily_subscription"
+                    android:icon="@drawable/ic_shopping_cart_black_24dp"
+                    android:title="My Daily Subscription" />-->
+
+
+                <item
+                    android:id="@+id/my_orders"
+                    android:icon="@drawable/ic_history_black_24dp"
+                    android:title="Order History" />
+
+                <item
+                    android:id="@+id/cancel_order"
+                    android:icon="@drawable/ic_cancel_black_24dp"
+                    android:title="My Order" />
+
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/contact_us"
+                android:icon="@drawable/ic_call_black_24dp"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/help_centre"
+                android:icon="@drawable/ic_help_outline_black_24dp"
+                android:title="Help Centre" />
+            </group>
+        </menu>
+    </item>
+
+<item
+    android:title="Exit"
+    >
+    <menu>
+        <group>
+
+    <item
+        android:id="@+id/client_log_out"
+        android:title="Log Out"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        />
+        </group>
+    </menu>
+</item>
+</menu>

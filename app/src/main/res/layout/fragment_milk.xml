@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/find_elec_frame_frag"
+    android:background="@android:color/white"
+    tools:context=".FreshFragment"
+    android:layout_marginTop="?attr/actionBarSize"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="50dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:background="@drawable/boarderwhite"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                >
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:layout_weight=".2"
+                    android:src="@drawable/ic_search_black_24dp"
+                    />
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:padding="5dp"
+                    android:hint="search 7000+ products "
+                    android:background="@color/white"
+                    android:focusable="false"
+                    />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/frsh_menu_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            android:scrollbars="horizontal"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/item_fresh_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            app:layout_anchorGravity="bottom|right|end"
+            />
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

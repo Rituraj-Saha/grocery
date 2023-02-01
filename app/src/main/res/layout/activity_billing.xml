@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BillingActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:id="@+id/parent_bill_lin"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/bill_toolbar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:titleTextColor="@android:color/white"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:layout_marginBottom="10dp"
+            app:title="My Order"
+            >
+
+        </androidx.appcompat.widget.Toolbar>
+
+       <!-- <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Delivery details"
+            android:textAlignment="textStart"
+            android:paddingStart="15dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:background="#36474f"/>-->
+
+    <!--<LinearLayout
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#36474f"
+        >-->
+        <TextView
+            android:id="@+id/client_name_bill_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:text="customer Name"
+            android:textAlignment="textStart"
+            android:paddingStart="15dp"
+            android:textColor="@color/deepgray"
+            android:textSize="18sp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/nexademo_light"
+            />
+
+   <!-- </LinearLayout>-->
+
+
+
+        <TextView
+            android:id="@+id/client_phone_bill_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:text="customer phone"
+            android:textAlignment="textStart"
+            android:paddingStart="15dp"
+            android:textColor="@color/deepgray"
+            android:fontFamily="@font/nexademo_light"
+            />
+
+
+
+
+            <TextView
+                android:textColor="@color/deepgray"
+                android:id="@+id/client_address_bill_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:text="customer Address"
+                android:textAlignment="textStart"
+                android:paddingStart="15dp"
+                android:paddingEnd="2dp"
+                android:fontFamily="@font/nexademo_light"
+                />
+
+        <TextView
+            android:id="@+id/client_bill_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pin"
+            android:textAlignment="textStart"
+            android:paddingStart="15dp"
+            android:paddingEnd="2dp"
+            android:textColor="@color/deepgray"
+            android:fontFamily="@font/nexademo_light"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please make sure this address is suitable to collect your grocery order"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:textColor="@color/deepgray"
+            android:background="@drawable/background_bill_offwhite"
+            android:textStyle="bold"
+            android:fontFamily="@font/nexademo_light"
+            />
+
+
+
+        <LinearLayout
+            android:id="@+id/add_adress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1"
+            android:background="@color/colorPrimary"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            >
+          <!--  <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:src="@drawable/ic_location_pin_profile"
+                />-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Change or Add Addreess"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#f1f2f4"
+            android:layout_marginTop="2dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclear_cart"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#f1f2f4"
+            android:layout_marginTop="2dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PRICE DETAILS"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/nexademo_light"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgray"
+                android:layout_marginBottom="2dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_item_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Price(0 items)"
+                    android:paddingStart="5dp"
+                    android:layout_weight=".5"
+                    android:textSize="15sp"
+                    android:textColor="@color/deepgray"
+                    android:fontFamily="@font/nexademo_light"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_mrp_price_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B900"
+                    android:paddingStart="5dp"
+                    android:layout_weight=".5"
+                    android:textSize="15sp"
+                    android:gravity="end"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/deepgray"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Discount"
+                    android:paddingStart="5dp"
+                    android:layout_weight=".5"
+                    android:textSize="15sp"
+                    android:textColor="@color/deepgray"
+                    android:fontFamily="@font/nexademo_light"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_total_discount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="- \u20B900"
+                    android:paddingStart="5dp"
+                    android:layout_weight=".5"
+                    android:textSize="15sp"
+                    android:gravity="end"
+                    android:paddingEnd="5dp"
+                    android:textColor="#359647"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Charge"
+                    android:paddingStart="5dp"
+                    android:layout_weight=".5"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/nexademo_light"
+                    android:textColor="@color/deepgray"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Free"
+                    android:paddingStart="5dp"
+                    android:layout_weight=".5"
+                    android:textSize="15sp"
+                    android:gravity="end"
+                    android:paddingEnd="5dp"
+                    android:textColor="#359647"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgray"
+                android:layout_marginBottom="2dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount"
+                    android:paddingStart="5dp"
+                    android:layout_weight=".5"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/nexademo_light"
+                    android:textColor="@color/deepgray"/>
+
+                <TextView
+                    android:id="@+id/txt_total_amount_bill"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B900"
+                    android:paddingStart="5dp"
+                    android:layout_weight=".5"
+                    android:textSize="15sp"
+                    android:gravity="end"
+                    android:paddingEnd="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/deepgray"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgray"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_saving_bill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You will save \u20B900 on this order"
+                android:textColor="#359647"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/nexademo_light"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#F2F2EE"
+            android:layout_marginTop="2dp"
+            />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/txt_bill_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Warning!! Once you checkout your cart will be revoved."
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_below="@+id/parent_bill_lin"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/nexademo_light"
+            android:layout_marginStart="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_below="@+id/txt_bill_warning"
+            android:weightSum="1"
+            >
+            <TextView
+                android:id="@+id/bill_total_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:text="\u20B900"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:textSize="18sp"
+                android:textColor="@color/deepgray"
+                android:textStyle="bold"
+                />
+            <Button
+                android:id="@+id/bill_btn_checkout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_weight=".4"
+                android:text="Checkout"
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

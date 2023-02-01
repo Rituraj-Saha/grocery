@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginEnd="5dp"
+    android:visibility="visible"
+    android:id="@+id/item_parent_card">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/item_parent_lin"
+        android:paddingBottom="5dp"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        >
+
+    <ImageView
+        android:id="@+id/item_pic_img"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_weight=".2"
+        android:paddingStart="2dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="2dp"
+        android:paddingBottom="2dp"
+        android:src="@drawable/banana"
+        android:scaleType="fitXY"
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight=".5"
+        >
+        <TextView
+            android:id="@+id/item_name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iteam Name"
+            android:paddingStart="5dp"
+            android:textColor="@android:color/black"
+            />
+            <TextView
+                android:id="@+id/item_qty_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="subhead"
+                android:textAlignment="textStart"
+                android:paddingStart="5dp"
+                />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="\u20B9"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/item_price_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="amount"
+                android:textAlignment="textStart"
+                android:paddingStart="5dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="4dp"
+                android:textColor="@color/deepgray"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="2dp"
+                >
+                <TextView
+                    android:id="@+id/text_view_original_cash_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:gravity="start"
+                    android:textSize="10sp"
+                    android:text="100"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_centerVertical="true"
+                    android:layout_alignStart="@id/text_view_original_cash_amount"
+                    android:layout_alignEnd="@id/text_view_original_cash_amount"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_discount_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="2dp"
+                android:text="12% off"
+                android:textSize="11sp"
+                android:textColor="#359647"
+                android:layout_gravity="start"
+                android:paddingTop="7dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight=".3">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/btn_subscribe"
+                android:background="@color/colorPrimary"
+                android:text="SUBSCRIBE"
+                android:textSize="10sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="2dp"
+                android:textColor="@color/white"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="2dp"
+                android:paddingEnd="2dp"
+                >
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_itm_add_btn_crd"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight=".6"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+
+                    >
+                    <Button
+                        android:id="@+id/btn_add_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="ADD"
+                        android:background="@drawable/boundary_only"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_itm_minus_crd"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight=".4"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/boundary_accent"
+                    android:visibility="gone"
+                    >
+                    <Button
+                        android:id="@+id/item_order_minus_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:background="@color/colorPrimary"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_itm_add_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight=".2"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="2dp"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:id="@+id/item_order_qty_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:text="ADD"
+                        android:paddingTop="2dp"
+                        android:textAlignment="center"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight=".4"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/boundary_accent"
+                    >
+
+                    <Button
+                        android:id="@+id/item_order_plus_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="+"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/add_btn_back_item_backgroud"
+                        android:textSize="18sp"
+                        />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

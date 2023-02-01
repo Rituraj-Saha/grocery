@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".AddMoneytoWallet">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:weightSum="1">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:background="@color/colorPrimary"
+            android:padding="2dp"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".9"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:text="MEE Wallet"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:paddingTop="15dp"
+            android:paddingEnd="30dp"
+            android:paddingStart="2dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="#F0F0F0"
+        android:layout_marginTop="10dp"
+        >
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".6"
+        android:text="Your balance"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:paddingStart="8dp"
+        android:textColor="#353535"
+        />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:text="\u20B9"
+            android:textSize="19sp"
+            android:paddingTop="10dp"
+            android:paddingStart="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/deepgray"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/wallet_amt_txt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            android:text="0.00"
+            android:textSize="19sp"
+            android:paddingTop="10dp"
+            android:paddingStart="5dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/deepgray"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top-up your account"
+        android:layout_marginTop="60dp"
+        android:textSize="16sp"
+        android:textColor="@color/deepgray"
+        android:paddingStart="25dp"
+        />
+
+    <TextView
+        android:id="@+id/wallet_added_amt_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\u20B9500"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:textColor="@color/deepgray"
+        android:paddingStart="25dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="200dp"
+        android:layout_height="1dp"
+        android:background="@color/deepgray"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/wallet_added_rs_250_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#F0F0F0"
+            android:text="\u20B9250"
+            android:layout_weight=".3"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            />
+
+        <Button
+            android:id="@+id/wallet_added_rs_500_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:text="\u20B9500"
+            android:layout_weight=".3"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/wallet_added_rs_1000_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#F0F0F0"
+            android:text="\u20B91000"
+            android:layout_weight=".3"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/wallet_pay_online_btn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:background="@color/colorPrimary"
+        android:text="Pay online"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textStyle="bold"/>
+
+</LinearLayout>

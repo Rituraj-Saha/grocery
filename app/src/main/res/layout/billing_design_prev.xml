@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:visibility="visible"
+    android:id="@+id/bill_parent_card"
+    >
+    <LinearLayout
+        android:id="@+id/parent_lin_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/txt_time_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="time"
+            android:textSize="16sp"
+            android:fontFamily="@font/nexademo_light"
+            android:layout_marginStart="15dp"/>
+        <LinearLayout
+            android:id="@+id/parent_lint_hor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight=".1"
+                android:src="@drawable/ic_access_time_black_24dp"
+                android:layout_gravity="top"
+                />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight=".9"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/bill_parent_lin"
+        android:background="#F4F6F1">
+
+        <TextView
+            android:id="@+id/order_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="user name"
+            android:textSize="18sp"
+            android:paddingStart="10dp"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:id="@+id/order_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="user phone"
+            android:textSize="18sp"
+            android:paddingStart="10dp"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:id="@+id/order_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="user address"
+            android:textSize="18sp"
+            android:paddingStart="10dp"
+            android:visibility="gone"
+            />
+
+
+      <!-- <TextView
+           android:id="@+id/pay_status"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="status"
+           android:paddingStart="10dp"
+           android:textSize="18sp"
+           />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:visibility="visible"
+
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/bill_name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="List of orders"
+                    android:paddingStart="5dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:text="order"
+                        android:layout_weight=".3"
+                        android:textAlignment="textStart"
+                        android:fontFamily="@font/nexademo_light"
+                        android:textColor="@android:color/black"
+                        />
+
+                    <TextView
+                        android:id="@+id/bill_price_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="amount"
+                        android:textAlignment="textStart"
+                        android:layout_weight=".7"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/nexademo_light"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nexademo_light"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="  \u20B9"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/bill_qty_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="qty"
+                        android:fontFamily="@font/nexademo_light"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mode of payment"
+                        android:textColor="@color/deepgray"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nexademo_light"
+                        android:layout_marginStart="30dp"/>
+
+                    <TextView
+                        android:id="@+id/pay_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="status"
+                        android:paddingStart="10dp"
+                        android:fontFamily="@font/nexademo_light"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/deepgray"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/client_delivered_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boarder_image_blue"
+            android:layout_margin="10dp"
+            android:text="check as delivered"
+            android:textAllCaps="false"
+            android:fontFamily="@font/nexademo_light"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

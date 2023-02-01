@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="2dp"
+    android:visibility="visible"
+    android:id="@+id/bill_parent_card">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/bill_parent_lin"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:background="@color/white"
+            >
+
+
+            <ImageView
+                android:id="@+id/bill_pic_img"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight=".2"
+                android:paddingStart="2dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="2dp"
+                android:paddingBottom="2dp"
+                android:src="@drawable/banana"
+                android:scaleType="fitXY"
+                />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight=".6"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/bill_name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:text="Iteam Name"
+                    android:paddingStart="5dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/bill_subhead"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="subhead"
+                    android:paddingStart="5dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="qty:"
+                        android:textAlignment="textEnd"
+                        android:paddingStart="5dp"
+                        android:textColor="@android:color/black"
+                        />
+                    <TextView
+                        android:id="@+id/bill_qty_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight=".7"
+                        android:text="q"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="5dp"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="\u20B9"
+                            android:textAlignment="textEnd"
+                            android:textColor="@android:color/black"
+                            />
+                        <TextView
+                            android:id="@+id/bill_price_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="amount"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                            android:paddingStart="5dp"
+                            />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
